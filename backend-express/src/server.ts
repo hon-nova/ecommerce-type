@@ -7,6 +7,10 @@ const app = express()
 const port=3333
 // Use CORS middleware
 app.use(cors());
+app.use(cors({
+   origin: 'http://localhost:8080', // Frontend URL
+}));
+
 
 app.use(express.static(path.join(__dirname,'../../dist')))
 

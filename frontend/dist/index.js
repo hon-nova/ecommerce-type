@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email,
             password,
         };
+        console.log(`data::${data}`);
         try {
             const response = yield fetch('http://localhost:3333/register', {
                 method: 'POST',

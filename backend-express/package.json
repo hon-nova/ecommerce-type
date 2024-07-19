@@ -1,9 +1,9 @@
 {
   "name": "backend-express",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/server.ts",
     "start": "nodemon dist/server.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
