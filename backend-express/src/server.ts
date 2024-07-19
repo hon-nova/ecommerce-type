@@ -1,9 +1,12 @@
 import express, {Request, Response} from 'express'
 import path from 'path'
 import bodyParser from 'body-parser'
+import cors from "cors"
 
 const app = express()
 const port=3333
+// Use CORS middleware
+app.use(cors());
 
 app.use(express.static(path.join(__dirname,'../../dist')))
 
@@ -19,8 +22,8 @@ app.post('/register',(req:Request,res:Response)=>{
   
    res.json({ message: `Registration successful with username::${username}, email::${email}!` });
 })
-app.get('/',(req,res)=>{
-   res.sendFile(path.join(__dirname,'../../index.html'))
+app.get('/',(req:Request,res:Response)=>{
+   res.sendFile(path.join(__dirname,'../../public/index.html'))
 })
 
 app.listen(port,()=>{
