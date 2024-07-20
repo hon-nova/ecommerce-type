@@ -26,8 +26,9 @@ app.post('/register',(req:Request,res:Response)=>{
   
    res.json({ message: `Registration successful with username::${username}, email::${email}!` });
 })
+
 app.get('/',(req:Request,res:Response)=>{
-   res.sendFile(path.join(__dirname,'../../public/index.html'))
+   res.sendFile(path.join(__dirname,'../frontend/public/index.html'))
 })
 
 app.listen(port,()=>{

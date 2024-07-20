@@ -11,6 +11,9 @@ const app = (0, express_1.default)();
 const port = 3333;
 // Use CORS middleware
 app.use((0, cors_1.default)());
+app.use((0, cors_1.default)({
+    origin: 'http://localhost:8080', // Frontend URL
+}));
 app.use(express_1.default.static(path_1.default.join(__dirname, '../../dist')));
 app.use(body_parser_1.default.json());
 app.post('/register', (req, res) => {

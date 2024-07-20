@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
          const response = await fetch('http://localhost:3333/register', {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/html',
             },
             body: JSON.stringify(data),
        });
